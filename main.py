@@ -7,13 +7,13 @@ from dotenv import load_dotenv
 
 # --- 1. SETUP AND CONFIGURATION ---
 
-# Load environment variables from .env file (for the OpenAI API key)
+# Load environment variables from .env file (for the Gemini API key)
 load_dotenv()
 
 # Initialize the FastAPI app
 app = FastAPI()
 
-# Get the OpenAI API key from environment variables
+# Get the Gemini API key from environment variables
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
     raise ValueError("GEMINI_API_KEY not found in .env file")
@@ -47,7 +47,7 @@ Your rules are:
 
 def get_llm_response(user_message: str, context: str) -> str:
     """
-    Calls the OpenAI API to get a response based on the provided context and user message.
+    Calls the Gemini API to get a response based on the provided context and user message.
     """
     try:
         response = client.models.generate_content(
