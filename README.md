@@ -28,7 +28,7 @@ Follow these instructions to get the bot running on your local machine for devel
 First, clone the repository to your local machine.
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/AdityaPandey4/Pneuma_internship.git
 cd <repository-folder-name>
 ```
 
